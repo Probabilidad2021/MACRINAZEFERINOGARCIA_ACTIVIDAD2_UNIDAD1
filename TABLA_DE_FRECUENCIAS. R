@@ -1,0 +1,19 @@
+ attach(RECIEN_NACIDOS)
+summary(EDAD_MADRE)
+summary(PESO_GANADO)
+
+
+tabla=as.data.frame(table(EDAD_MADRE=factor(cut(EDAD_MADRE,breaks = 10))))
+
+attach(tabla)
+
+sum(Freq)
+
+
+tabla[("FREC.RELATIVA")] =with(tabla,Freq/1000)
+
+tabla[("PORCENTAJE")] =with(tabla,(Freq/1000)*100)
+
+attach(tabla)
+sum(PORCENTAJE)
+                                                                                                  
